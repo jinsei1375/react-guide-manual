@@ -10,7 +10,18 @@
     <script type="text/babel">
       const appEl = document.querySelector("#app");
       const root = ReactDOM.createRoot(appEl);
-      root.render(<h1>こんにちは</h1>);
+      // function Example() {
+      //   return <h1>Hello world</h1>;
+      // }
+      const Example = () => {
+        // 返り値が複数行になる場合は()で囲む
+        return (
+          <div>
+            <h1>Hello world</h1>
+          </div>
+        );
+      };
+      root.render(<Example />);
     </script>
   </body>
 </html>

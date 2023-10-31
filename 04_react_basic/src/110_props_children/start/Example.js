@@ -2,7 +2,7 @@ import Profile from "./components/Profile";
 import Container from "./components/Container";
 
 const profile = [
-  { name: "Takashi", age: 19, country: "Japan", color: "" },
+  { name: "Takashi", age: 19, country: "Japan", color: "red" },
   { name: "Jane", age: 28, country: "UK", color: "blue" },
 ];
 
@@ -13,7 +13,7 @@ const Example = () => {
         <Profile {...profile[0]} />
         <Profile {...profile[1]} />
       </Container>
-      <Container title="Childrenとは？"  
+      <Container title="個別を渡す"  
         children={
           [
             <Profile key={profile[0].name} {...profile[0]} />,

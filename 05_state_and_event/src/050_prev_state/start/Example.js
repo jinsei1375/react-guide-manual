@@ -4,7 +4,7 @@ const Example = () => {
   const [count, setCount] = useState(0);
   const countUp = () => {
     setCount(count + 1);
-    setCount(prevstate => prevstate + 1);
+    setCount(prevstate /* 現在のstateの値 */ => prevstate + 1);
     console.log(count)
   }
   const countDown = () => {

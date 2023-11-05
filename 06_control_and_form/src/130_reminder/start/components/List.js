@@ -3,18 +3,17 @@ const List = ({todos, deleteTodo}) => {
     deleteTodo(id)
   }
   return (
-    <>
       <div>
         {todos.map(todo => {
           return (
             <div key={todo.id}>
-              <button onClick={complete(todo.id)}>完了</button>
+              {/* 引数を指定する必要があるため、無名関数を使う */}
+              <button onClick={() => complete(todo.id)}>完了</button>
               {todo.content}
             </div>
           );
         })}
       </div>
-    </>
   )
 };
 

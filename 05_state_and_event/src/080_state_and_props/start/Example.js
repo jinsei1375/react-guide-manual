@@ -11,6 +11,7 @@ const Example = () => {
   return (
     <>
     <button onClick={toggleComponent}>toggle</button>
+    {/* 同じコンポーネントでも別物で扱いたい場合はkeyを利用する！！ */}
     {toggle ? <Count key="A" title="A" count={countA} setCount={setCountA} /> : <Count key="B" title="B" count={countB} setCount={setCountB} />}
     
     </>

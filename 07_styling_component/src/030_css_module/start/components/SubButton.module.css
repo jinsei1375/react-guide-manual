@@ -13,3 +13,10 @@
 .selected {
     background-color: pink;
 }
+
+.btn:hover {
+    background-color: red;
+}
+.btn:active {
+    background-color: purple;
+}

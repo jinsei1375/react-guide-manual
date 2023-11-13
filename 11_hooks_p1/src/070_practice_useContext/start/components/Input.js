@@ -19,7 +19,7 @@ const Input = ({ name }) => {
         onChange={numChangeHandler}
       />
     </div>
-  )
-}
+  );
+};
 
 export default Input;

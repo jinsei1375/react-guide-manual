@@ -1,6 +1,5 @@
 import { useCalc, useDispatchCalc } from "../context/CalcContext";
 
-
 const Select = () => {
   const state = useCalc();
   const dispatch = useDispatchCalc();
@@ -16,7 +15,7 @@ const Select = () => {
         </option>
       ))}
     </select>
-  )
-}
+  );
+};
 
 export default Select;

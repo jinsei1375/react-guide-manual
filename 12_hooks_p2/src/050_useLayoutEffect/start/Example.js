@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
+import Random from "./Random";
+
+// POINT useLayoutEffectとは？useEffectとの違い
 const Example = () => {
   const [isDisp, setIsDisp] = useState(true);
 
@@ -9,6 +12,7 @@ const Example = () => {
     </>
   )
 }
+
 const Timer = () => {
   const [time, setTime] = useState(0);
 
@@ -16,7 +20,6 @@ const Timer = () => {
     // console.log('init');
     let intervalId = null;
     intervalId = window.setInterval(() => {
-      console.log('interval called');
       setTime(prev => prev + 1);
     }, 1000);
     return () => {
@@ -32,15 +35,26 @@ const Timer = () => {
     window.localStorage.setItem('time-key', time);
 
     return () => {
+      // debugger
       // console.log('updated end');
     }
   }, [time]);
 
+  useLayoutEffect(() => {
+    const _time = parseInt(window.localStorage.getItem('time-key'));
+    if(!isNaN(_time)) {
+      setTime(_time);
+    }
+  }, [])
+
   return (
-    <h3>
-      <time>{time}</time>
-      <span>秒経過</span>
-    </h3>
+    <>
+      <h3>
+        <time>{time}</time>
+        <span>秒経過</span>
+      </h3>
+      <Random />
+    </>
     );
 };
 

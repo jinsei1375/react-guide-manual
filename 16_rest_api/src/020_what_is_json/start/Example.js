@@ -26,6 +26,7 @@ const Example = () => {
   // JSON.stringify = オブジェクトや配列をJSON形式の文字列に変換する
   const usersDataString = JSON.stringify(usersData);
 
+  console.log(usersDataString);
   // JSON形式の文字列が出力される
   console.log(typeof usersDataString === 'string');
 

@@ -29,7 +29,7 @@ const Example = () => {
       {users.map(user => {
 
         return (
-          <div>
+          <div key={user.id}>
             <h3>{user.username}</h3>
             <p>age: {user.age}</p>
             <p>hobby: {user.hobbies.join(',')}</p>

@@ -1,3 +1,4 @@
+import { add, addAsync, minus } from "../store/modules/counter"
 import CounterResult from "./CounterResult"
 import CounterButton from "./CounterButton"
 
@@ -5,10 +6,9 @@ const Counter = () => {
     return (
         <>
             <CounterResult />
-            <CounterButton step={2} calcType="+"/>
-            <CounterButton step={2} calcType="-"/>
-            <CounterButton step={10} calcType="+"/>
-            <CounterButton step={10} calcType="-"/>
+            <CounterButton step={2} calcType="+" actionCreator={add}/>
+            <CounterButton step={2} calcType="-" actionCreator={add}/>
+            <CounterButton step={2} calcType="非同期(+)" actionCreator={addAsync}/>
         </>
     )
 }

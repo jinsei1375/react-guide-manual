@@ -19,8 +19,8 @@ export default function SSR({message}) {
 export async function getServerSideProps(context) {
 
   const {cookie} = context.req.headers;
-  console.log(cookie);
-  console.log('executed');
+  // console.log(cookie);
+  // console.log('executed');
   return {
     // redirect: {
     //   destination: '/',

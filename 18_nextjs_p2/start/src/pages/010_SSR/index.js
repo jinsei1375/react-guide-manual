@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-export default function SSR({message}) {
+// export default function SSR({message}) {
+export default function SSR() {
   console.log('hello');
-  console.log(message);
+  // console.log(message);
 
   // ブラウザ上で操作したい場合
   useEffect(() => {
@@ -16,16 +17,16 @@ export default function SSR({message}) {
   return <h3>{state}</h3>
 }
 
-export async function getServerSideProps(context) {
+// export async function getServerSideProps(context) {
 
-  const {cookie} = context.req.headers;
-  // console.log(cookie);
-  // console.log('executed');
-  return {
-    // redirect: {
-    //   destination: '/',
-    //   permanet: true
-    // },
-    props: { message: 'From Server Side Props' }
-  }
-}
+//   const {cookie} = context.req.headers;
+//   // console.log(cookie);
+//   // console.log('executed');
+//   return {
+//     // redirect: {
+//     //   destination: '/',
+//     //   permanet: true
+//     // },
+//     props: { message: 'From Server Side Props' }
+//   }
+// }

@@ -23,7 +23,7 @@ const reducer = (prev, { type, step }) => {
 // 不変性（Immutability）
 const Example = () => {
   const [state, setState] = useState(0);
-  const [rstate, dispatch] = useReducer(reducer, 0);
+  const [rstate, dispatch] = useReducer(reducer, 5);
   
   const step = 2;
   const countUp = () => {

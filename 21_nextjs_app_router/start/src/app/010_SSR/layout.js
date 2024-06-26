@@ -1,7 +1,8 @@
-export default function RootLayout({ children }) {
-  return (
-    <div style={{ background: 'red' }}>
-      <body>{children}</body>
-    </div>
-  );
+export default function SubLayout({ children }) {
+    return (
+        // <div style={{ background: 'red' }}>
+        <div>
+            {children}
+        </div>
+    )
 }

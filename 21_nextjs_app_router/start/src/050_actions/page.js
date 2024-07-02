@@ -1,15 +1,15 @@
-"use client";
+'use client';
 // POINT Server Actionsの使い方
-import ArticleList from "../../components/articleList";
-import ArticleForm from "./components/form";
-import { useEffect, useState } from "react";
+import ArticleList from '../components/articleList';
+import ArticleForm from './components/form';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
     const getArticles = async () => {
-      const ENDPOINT = "/api/article";
+      const ENDPOINT = '/api/article';
       const result = await fetch(ENDPOINT).then((res) => res.json());
       setArticles(result);
     };
